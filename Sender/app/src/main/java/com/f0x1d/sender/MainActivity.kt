@@ -18,11 +18,9 @@ class MainActivity : AppCompatActivity() {
     private var adress: TextInputEditText? = null
     private var elektro1: TextInputEditText? = null
     private var elektro2: TextInputEditText? = null
-    private var kuda: TextInputEditText? = null
     private var nomer: TextInputEditText? = null
     private var ot_kogo: TextInputEditText? = null
     private var save_adress: MaterialCheckBox? = null
-    private var save_kuda: MaterialCheckBox? = null
     private var save_nomer: MaterialCheckBox? = null
     private var save_ot_kogo: MaterialCheckBox? = null
     private var water_cold: TextInputEditText? = null
@@ -35,21 +33,15 @@ class MainActivity : AppCompatActivity() {
         water_hot = findViewById<View>(R.id.water_hot) as TextInputEditText
         elektro1 = findViewById<View>(R.id.elekto_1) as TextInputEditText
         elektro2 = findViewById<View>(R.id.elekto_2) as TextInputEditText
-        kuda = findViewById<View>(R.id.email) as TextInputEditText
-        kuda!!.setText(PreferenceManager.getDefaultSharedPreferences(applicationContext).getString("kuda", ""))
         ot_kogo = findViewById<View>(R.id.schot) as TextInputEditText
         ot_kogo!!.setText(PreferenceManager.getDefaultSharedPreferences(applicationContext).getString("ot_kogo", ""))
         adress = findViewById<View>(R.id.adress) as TextInputEditText
         adress!!.setText(PreferenceManager.getDefaultSharedPreferences(applicationContext).getString("adress", ""))
         nomer = findViewById<View>(R.id.nomer) as TextInputEditText
         nomer!!.setText(PreferenceManager.getDefaultSharedPreferences(applicationContext).getString("nomer", ""))
-        save_kuda = findViewById<View>(R.id.save_email) as MaterialCheckBox
         save_ot_kogo = findViewById<View>(R.id.save_schot) as MaterialCheckBox
         save_adress = findViewById<View>(R.id.save_adress) as MaterialCheckBox
         save_nomer = findViewById<View>(R.id.save_nomer) as MaterialCheckBox
-        if (PreferenceManager.getDefaultSharedPreferences(applicationContext).getString("kuda", "") != "") {
-            save_kuda!!.text = "Обновить"
-        }
         if (PreferenceManager.getDefaultSharedPreferences(applicationContext).getString("ot_kogo", "") != "") {
             save_ot_kogo!!.text = "Обновить"
         }
@@ -69,6 +61,7 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("sms_body", ot_kogo!!.text.toString() + " " + water_cold!!.text.toString() + " " + water_hot!!.text.toString() + " " + elektro1!!.text.toString() + " " + elektro2!!.text.toString() + " " + adress!!.text.toString())
             startActivity(intent)
         }
+        /*
         (findViewById<View>(R.id.fab) as FloatingActionButton).setOnClickListener {
             if (save_kuda!!.isChecked) {
                 PreferenceManager.getDefaultSharedPreferences(applicationContext).edit().putString("kuda", kuda!!.text.toString()).apply()
@@ -85,6 +78,7 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("android.intent.extra.TEXT", ot_kogo!!.text.toString() + " " + water_cold!!.text.toString() + " " + water_hot!!.text.toString() + " " + elektro1!!.text.toString() + " " + elektro2!!.text.toString() + " " + adress!!.text.toString())
             startActivity(Intent.createChooser(intent, "Send mail..."))
         }
+         */
     }
 
     companion object {

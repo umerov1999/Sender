@@ -20,14 +20,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:hint="ХВС" />
+                android:hint="Холодная вода" />
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/water_hot"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:hint="ГВС" />
+                android:hint="Горячая вода" />
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/elekto_1"
@@ -42,20 +42,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:hint="Электоэнергия Т2" />
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/email"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:hint="email получателя"
-                android:inputType="textEmailAddress" />
-
-            <com.google.android.material.checkbox.MaterialCheckBox
-                android:id="@+id/save_email"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Сохранить" />
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/schot"
@@ -88,7 +74,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:hint="Номер назначения (если SMS)" />
+                android:hint="Номер назначения" />
 
             <com.google.android.material.checkbox.MaterialCheckBox
                 android:id="@+id/save_nomer"
