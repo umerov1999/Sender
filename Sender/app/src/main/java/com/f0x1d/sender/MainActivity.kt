@@ -57,21 +57,18 @@ class MainActivity : AppCompatActivity() {
             if (save_nomer!!.isChecked) {
                 PreferenceManager.getDefaultSharedPreferences(applicationContext).edit().putString("nomer", nomer!!.text.toString()).apply()
             }
-            val intent = Intent("android.intent.action.VIEW", Uri.parse("sms:" + nomer!!.text.toString()))
-            intent.putExtra("sms_body", ot_kogo!!.text.toString() + " " + water_cold!!.text.toString() + " " + water_hot!!.text.toString() + " " + elektro1!!.text.toString() + " " + elektro2!!.text.toString() + " " + adress!!.text.toString())
-            startActivity(intent)
-        }
-        /*
-        (findViewById<View>(R.id.fab) as FloatingActionButton).setOnClickListener {
-            if (save_kuda!!.isChecked) {
-                PreferenceManager.getDefaultSharedPreferences(applicationContext).edit().putString("kuda", kuda!!.text.toString()).apply()
-            }
             if (save_ot_kogo!!.isChecked) {
                 PreferenceManager.getDefaultSharedPreferences(applicationContext).edit().putString("ot_kogo", ot_kogo!!.text.toString()).apply()
             }
             if (save_adress!!.isChecked) {
                 PreferenceManager.getDefaultSharedPreferences(applicationContext).edit().putString("adress", adress!!.text.toString()).apply()
             }
+            val intent = Intent("android.intent.action.VIEW", Uri.parse("sms:" + nomer!!.text.toString()))
+            intent.putExtra("sms_body", ot_kogo!!.text.toString() + " " + water_cold!!.text.toString() + " " + water_hot!!.text.toString() + " " + elektro1!!.text.toString() + " " + elektro2!!.text.toString() + " " + adress!!.text.toString())
+            startActivity(intent)
+        }
+        /*
+        (findViewById<View>(R.id.fab) as FloatingActionButton).setOnClickListener {
             val intent = Intent("android.intent.action.SEND")
             intent.type = "message/rfc822"
             intent.putExtra("android.intent.extra.EMAIL", arrayOf(kuda!!.text.toString()))
