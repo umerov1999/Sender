@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sender</string>
+
+    <string name="sms_info">SMS</string>
+    <string name="profiles">Профили:</string>
+    <string name="cold_water">Холодная вода</string>
+    <string name="hot_water">Горячая вода</string>
+    <string name="electro_t1">Электоэнергия Т1</string>
+    <string name="electro_t2">Электоэнергия Т2</string>
+    <string name="personal_account">Лицевой счёт</string>
+    <string name="address">Улица дом-кв</string>
+    <string name="number_point">Номер назначения</string>
+    <string name="save_profile">Сохранить</string>
+</resources>
